@@ -7,7 +7,6 @@ OpenAtlasExtension,is extension project of OpenAtlas ,a Android Component Plugin
 ### Contributors
 [achellies](https://github.com/achellies)<br>
 [BunnyBlue](https://github.com/bunnyblue)<br>
-[SuperSanders](https://github.com/SuperSanders)<br>
 
 
 
