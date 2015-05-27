@@ -1,16 +1,16 @@
 package com.openatlas.qrcode;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
 	private final static int SCANNIN_GREQUEST_CODE = 1;
 	/**
 	 * 显示扫描结果
