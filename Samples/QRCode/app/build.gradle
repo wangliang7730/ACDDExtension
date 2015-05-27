@@ -26,6 +26,6 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-
+    provided files('src/main/libs/android-support-v7-appcompat.jar')
+    compile files('src/main/libs/android-support-v4.jar')
 }

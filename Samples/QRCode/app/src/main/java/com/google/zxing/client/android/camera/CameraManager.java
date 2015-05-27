@@ -183,10 +183,13 @@ public final class CameraManager {
 	/**
 	 * Asks the camera hardware to begin drawing preview frames to the screen.
 	 */
-	public void startPreview() {
+	public void startPreview()  throws RuntimeException {
 		if (camera != null && !previewing) {
-			camera.startPreview();
-			previewing = true;
+
+				camera.startPreview();
+				previewing = true;
+
+
 		}
 	}
 

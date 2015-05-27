@@ -54,7 +54,13 @@ public final class CaptureActivityHandler extends Handler {
     decodeThread.start();
     state = State.SUCCESS;
     // Start ourselves capturing previews and decoding.
-    CameraManager.get().startPreview();
+   try {
+     CameraManager.get().startPreview();
+   }catch ( RuntimeException e){
+     e.printStackTrace();
+     activity.finish();
+       return;
+   }
     restartPreviewAndDecode();
   }
 
