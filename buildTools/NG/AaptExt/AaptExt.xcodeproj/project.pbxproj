@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D49E91D81B3BA2CC00D4759D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D49E91D71B3BA2CC00D4759D /* main.cpp */; };
 		D49E91E01B3BA63A00D4759D /* AaptConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D49E91DE1B3BA63A00D4759D /* AaptConfig.cpp */; };
+		D4E1F0BF1B5113A500A3E3BD /* CodeGen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4E1F0BD1B5113A500A3E3BD /* CodeGen.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		D49E91D71B3BA2CC00D4759D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		D49E91DE1B3BA63A00D4759D /* AaptConfig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AaptConfig.cpp; sourceTree = "<group>"; };
 		D49E91E11B3BAC6800D4759D /* AaptConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AaptConfig.h; sourceTree = "<group>"; };
+		D4E1F0BD1B5113A500A3E3BD /* CodeGen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CodeGen.cpp; sourceTree = "<group>"; };
+		D4E1F0BE1B5113A500A3E3BD /* CodeGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeGen.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				D49E91D71B3BA2CC00D4759D /* main.cpp */,
 				D49E91DE1B3BA63A00D4759D /* AaptConfig.cpp */,
 				D49E91E11B3BAC6800D4759D /* AaptConfig.h */,
+				D4E1F0BD1B5113A500A3E3BD /* CodeGen.cpp */,
+				D4E1F0BE1B5113A500A3E3BD /* CodeGen.h */,
 			);
 			path = AaptExt;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4E1F0BF1B5113A500A3E3BD /* CodeGen.cpp in Sources */,
 				D49E91D81B3BA2CC00D4759D /* main.cpp in Sources */,
 				D49E91E01B3BA63A00D4759D /* AaptConfig.cpp in Sources */,
 			);
@@ -241,6 +247,7 @@
 				D49E91DD1B3BA2CC00D4759D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
