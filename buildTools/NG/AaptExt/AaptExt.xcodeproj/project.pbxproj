@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D41A60DD1B51F8BF007D1246 /* CodeGenFileUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D41A60DB1B51F8BF007D1246 /* CodeGenFileUtil.cpp */; };
 		D49E91D81B3BA2CC00D4759D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D49E91D71B3BA2CC00D4759D /* main.cpp */; };
 		D49E91E01B3BA63A00D4759D /* AaptConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D49E91DE1B3BA63A00D4759D /* AaptConfig.cpp */; };
 		D4E1F0BF1B5113A500A3E3BD /* CodeGen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4E1F0BD1B5113A500A3E3BD /* CodeGen.cpp */; };
@@ -25,6 +26,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D41A60DB1B51F8BF007D1246 /* CodeGenFileUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CodeGenFileUtil.cpp; sourceTree = "<group>"; };
+		D41A60DC1B51F8BF007D1246 /* CodeGenFileUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeGenFileUtil.h; sourceTree = "<group>"; };
 		D49E91D41B3BA2CC00D4759D /* AaptExt */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AaptExt; sourceTree = BUILT_PRODUCTS_DIR; };
 		D49E91D71B3BA2CC00D4759D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		D49E91DE1B3BA63A00D4759D /* AaptConfig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AaptConfig.cpp; sourceTree = "<group>"; };
@@ -68,6 +71,8 @@
 				D49E91E11B3BAC6800D4759D /* AaptConfig.h */,
 				D4E1F0BD1B5113A500A3E3BD /* CodeGen.cpp */,
 				D4E1F0BE1B5113A500A3E3BD /* CodeGen.h */,
+				D41A60DB1B51F8BF007D1246 /* CodeGenFileUtil.cpp */,
+				D41A60DC1B51F8BF007D1246 /* CodeGenFileUtil.h */,
 			);
 			path = AaptExt;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 				D4E1F0BF1B5113A500A3E3BD /* CodeGen.cpp in Sources */,
 				D49E91D81B3BA2CC00D4759D /* main.cpp in Sources */,
 				D49E91E01B3BA63A00D4759D /* AaptConfig.cpp in Sources */,
+				D41A60DD1B51F8BF007D1246 /* CodeGenFileUtil.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +223,7 @@
 		D49E91DC1B3BA2CC00D4759D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -224,6 +231,7 @@
 		D49E91DD1B3BA2CC00D4759D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
