@@ -18,7 +18,7 @@
 using namespace std;
 #define  OPENATLAS_NS_RESOURCE_CLASS "OpenAtlasResource"
 class CodeGen{
-   
+
 
 public:
      enum FUN_TYPE {FUN_TYPE_INT, FUN_TYPE_STRING, FUN_TYPE_VOID,FUN_TYPE_FUNCTION_SET,FUN_TYPE_FUNCTION_GET};
@@ -30,6 +30,31 @@ public:
     string getFunctionMapName(string typeName);
     void genGetterFunction(string resType,string resName);
     void  genSetterFuntion(string  name,FUN_TYPE  functionTYpe);
+    
+    
+    const string resTypeList[21]={//resource type ,version  android  22
+        "anim",
+        "animator",
+        "array",
+        "attr",
+        "bool",
+        "color",
+        "dimen",
+        "drawable",
+        "fraction",
+        "id",
+        "integer",
+        "interpolator",
+        "layout",
+        "menu",
+        "mipmap",
+        "plurals",
+        "raw",
+        "string",
+        "style",
+        "transition",
+        "xml"
+    };
 };
 
 #endif /* defined(__AaptExt__CodeGen__) */
