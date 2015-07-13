@@ -76,9 +76,9 @@ string CodeGen::genOPENATLAS_NS_RESOURCE_CLASS(){
         contentRESOURCE_CLASS.append("#include <iostream>\n");
         contentRESOURCE_CLASS.append("#include <map>\n");
         //gen header body start
-   
+       contentRESOURCE_CLASS.append("class OpenAtlasResource{\n");
         contentRESOURCE_CLASS.append( CodeGen_internal_genClass_maps(this));
-        contentRESOURCE_CLASS.append("class OpenAtlasResource{\n");
+    
         contentRESOURCE_CLASS.append("};\n");
         //gen header body end
 
@@ -86,14 +86,14 @@ string CodeGen::genOPENATLAS_NS_RESOURCE_CLASS(){
         contentRESOURCE_CLASS.append("#endif ");
         cout<<contentRESOURCE_CLASS;
 
-        return "";
+        return contentRESOURCE_CLASS;
 }
 string CodeGen_internal_genClass_maps(CodeGen *mCodeGen){
     string contentClassMaps("");
     
     int arrayIndex=0;
     for(arrayIndex=0;arrayIndex< sizeof(mCodeGen->resTypeList)/sizeof(string);arrayIndex++){
-        contentClassMaps.append("map<std::string ,int> ");
+        contentClassMaps.append("   map<std::string ,int> ");
         contentClassMaps.append(mCodeGen->resTypeList[arrayIndex]).append("Maps ;\n");
        
         cout<<"dump "<<mCodeGen->resTypeList[arrayIndex];
