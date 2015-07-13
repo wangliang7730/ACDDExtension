@@ -10,8 +10,9 @@
 #include "AaptConfig.h"
 
 #include "CodeGen.h"
-
+#include "CodeGenFileUtil.h"
 void  testCodeGen();
+void  testFile(std::string content);
 int main(int argc, const char * argv[]) {
     // insert code here...
     std::cout << "Hello, World!\n";
@@ -26,9 +27,17 @@ int main(int argc, const char * argv[]) {
 
 void  testCodeGen(){
     CodeGen mCode;
-    mCode.genOPENATLAS_NS_RESOURCE_CLASS();
+    ;
+    testFile(mCode.genOPENATLAS_NS_RESOURCE_CLASS());
    // mCode.genSetterFuntion("drawable", CodeGen::FUN_TYPE_FUNCTION_GET);
     mCode.genGetterFunction("drawable", "icon");
     
+    
+    
 
+}
+void  testFile(std::string content){
+    CodeGenFileUtil mCodeGen;
+    mCodeGen.genFile("/Users/BunnyBlue/Downloads/aapt.h", content);
+    
 }
