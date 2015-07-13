@@ -25,6 +25,7 @@ public:
     //gen environment  valid function
     
     string  genOPENATLAS_NS_RESOURCE_CLASS();
+    string  genOPENATLAS_NS_RESOURCE_CLASS_PUBLIC_FUNCTION();
     void  genEnvValidFunction();
     void  genSetFuntion();
     string getFunctionMapName(string typeName);
