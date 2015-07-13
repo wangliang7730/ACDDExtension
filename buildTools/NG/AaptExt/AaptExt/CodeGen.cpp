@@ -78,15 +78,45 @@ string CodeGen::genOPENATLAS_NS_RESOURCE_CLASS(){
         //gen header body start
        contentRESOURCE_CLASS.append("class OpenAtlasResource{\n");
         contentRESOURCE_CLASS.append( CodeGen_internal_genClass_maps(this));
-    
-        contentRESOURCE_CLASS.append("};\n");
         //gen header body end
+    contentRESOURCE_CLASS.append(genOPENATLAS_NS_RESOURCE_CLASS_PUBLIC_FUNCTION());
+    //gen  function start
+    //gen function end
+        contentRESOURCE_CLASS.append("};\n");
+    
 
 
         contentRESOURCE_CLASS.append("#endif ");
         cout<<contentRESOURCE_CLASS;
 
         return contentRESOURCE_CLASS;
+}
+//gen  public  function
+string CodeGen::genOPENATLAS_NS_RESOURCE_CLASS_PUBLIC_FUNCTION(){
+    //void get
+    string contentFunctions("public :\n");
+    
+    int arrayIndex=0;
+    for(arrayIndex=0;arrayIndex< sizeof(resTypeList)/sizeof(string);arrayIndex++){
+        string funName(resTypeList[arrayIndex]);
+        
+        funName[0] = toupper(funName[0]);
+        contentFunctions.append("   // start gen function ").append(resTypeList[arrayIndex]).append("\n\n\n");
+        contentFunctions.append("  void set");
+        contentFunctions.append(funName);
+        contentFunctions.append("(std::string resName,int resId);\n");//gen set
+        
+        contentFunctions.append("  int get");
+        contentFunctions.append(funName);
+        contentFunctions.append("(std::string resName);\n");
+        
+          contentFunctions.append("   // end gen function ").append(resTypeList[arrayIndex]).append("\n\n\n");
+   
+    }
+    
+    return contentFunctions;
+    
+
 }
 string CodeGen_internal_genClass_maps(CodeGen *mCodeGen){
     string contentClassMaps("");
