@@ -26,11 +26,12 @@ public:
     
     string  genOPENATLAS_NS_RESOURCE_CLASS();
     string  genOPENATLAS_NS_RESOURCE_CLASS_PUBLIC_FUNCTION();
+      string  genOPENATLAS_NS_RESOURCE_CLASS_PUBLIC_FUNCTION_IMPL();
     void  genEnvValidFunction();
     void  genSetFuntion();
     string getFunctionMapName(string typeName);
-    void genGetterFunction(string resType,string resName);
-    void  genSetterFuntion(string  name,FUN_TYPE  functionTYpe);
+//    void genGetterFunction(string resType,string resName);
+//    void  genSetterFuntion(string  name,FUN_TYPE  functionTYpe);
     
     
     const string resTypeList[21]={//resource type ,version  android  22

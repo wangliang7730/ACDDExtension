@@ -28,9 +28,10 @@ int main(int argc, const char * argv[]) {
 void  testCodeGen(){
     CodeGen mCode;
     ;
-    testFile(mCode.genOPENATLAS_NS_RESOURCE_CLASS());
+    //testFile(mCode.genOPENATLAS_NS_RESOURCE_CLASS());
+      testFile(mCode.genOPENATLAS_NS_RESOURCE_CLASS_PUBLIC_FUNCTION_IMPL());
    // mCode.genSetterFuntion("drawable", CodeGen::FUN_TYPE_FUNCTION_GET);
-    mCode.genGetterFunction("drawable", "icon");
+   // mCode.genGetterFunction("drawable", "icon");
     
     
     
