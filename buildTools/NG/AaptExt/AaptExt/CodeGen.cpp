@@ -20,18 +20,7 @@ string CodeGen_internal_genClass_maps(CodeGen *mCodeGen);
 //
 //
 //        std::locale loc;
-//        string funName(resType);
 //
-//        funName[0] = toupper(funName[0]);
-//
-//
-//        cout<<"//function auto gen bye AaptExt\n";
-//        cout<<"int "<<OPENATLAS_NS_RESOURCE_CLASS<<"::get"<<funName<<"(std::string resType,std::string resName){\n"
-//            <<"map<string, int>::iterator itr ="<<getFunctionMapName(resType)<<".find("<<resName<<");\n"//gen  map find
-//            <<" if (itr == "<<getFunctionMapName(resType)<<".end()){\n"
-//            <<" return 0x0000;\n}\n"
-//            <<"return itr->second;"
-//            <<" \n}"<<endl;
 //}
 
 //void CodeGen::genSetterFuntion(string name, CodeGen::FUN_TYPE functionType){
@@ -121,13 +110,14 @@ string CodeGen::genOPENATLAS_NS_RESOURCE_CLASS_PUBLIC_FUNCTION(){
 string CodeGen::genOPENATLAS_NS_RESOURCE_CLASS_PUBLIC_FUNCTION_IMPL()
 {
     string contentFunImpl("//auto gen by aaptExt");
-    contentFunImpl.append("#include \"OpenAtlasResource.h\"");
+    contentFunImpl.append("#include \"OpenAtlasResource.h\"\n\n");
     
     
     int arrayIndex=0;
     for(arrayIndex=0;arrayIndex< sizeof(resTypeList)/sizeof(string);arrayIndex++){
         string funName(resTypeList[arrayIndex]);
-        //gen  setter
+         funName[0] = toupper(funName[0]);
+        //gen  getter
         contentFunImpl.append("int ").append(OPENATLAS_NS_RESOURCE_CLASS);
         contentFunImpl.append("::get").append(funName);
         contentFunImpl.append("(std::string resName){\n");
@@ -138,9 +128,34 @@ string CodeGen::genOPENATLAS_NS_RESOURCE_CLASS_PUBLIC_FUNCTION_IMPL()
         contentFunImpl.append("if (itr == ").append(getFunctionMapName(funName)).append(".end()){\n");
         contentFunImpl.append("return 0x0000;\n}\n");
         contentFunImpl.append("return itr->second;");
-        contentFunImpl.append(" \n}\n\n");
+        contentFunImpl.append(" \n}\n\n\n\n");
         
-        //gen  setter end
+        //gen  getter end
+        
+        
+        //get setter
+        
+        
+       
+        
+        cout<<"//function auto gen bye AaptExt\n";
+        
+        contentFunImpl.append("int ").append(OPENATLAS_NS_RESOURCE_CLASS);
+        contentFunImpl.append("::set").append(funName).append("(std::string resName,int resVal){\n");
+        contentFunImpl.append(getFunctionMapName(resTypeList[arrayIndex]));
+        //.insert(std::pair<std::string, Food>("Key", Food("Ice Cream")));
+        contentFunImpl.append(".insert(std::pair<std::string, int>");
+        contentFunImpl.append("(resName,resVal));\n");
+//        contentFunImpl.append("map<string, int>::iterator itr =");
+//        contentFunImpl.append(getFunctionMapName(resTypeList[arrayIndex]));
+//        contentFunImpl.append(".find(").append("resName").append(");\n");
+//        contentFunImpl.append(" if (itr ==");
+//        contentFunImpl.append(getFunctionMapName(resTypeList[arrayIndex]));
+//        contentFunImpl.append(".end()){\n");
+//        contentFunImpl.append(" return 0x0000;\n}\n");
+//        contentFunImpl.append("return itr->second;");
+          contentFunImpl.append(" \n}\n\n");
+     
     
     }
     
