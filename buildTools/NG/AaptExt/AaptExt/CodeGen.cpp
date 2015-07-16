@@ -8,46 +8,7 @@
 
 #include "CodeGen.h"
 string CodeGen_internal_genClass_maps(CodeGen *mCodeGen);
-//void CodeGen::genGetterFunction(string resType, string resName){
-//        //    map<string, int>::iterator itr = mValue.find(inName);
-//        //    if (itr == mValue.end())
-//        //    {
-//        //        throw "No value could be found.";
-//        //    }
-//        //
-//        //    int value = itr->second;
-//        cout<<"void gen "<<resType <<" function  type"<<resType<<endl;
-//
-//
-//        std::locale loc;
-//
-//}
 
-//void CodeGen::genSetterFuntion(string name, CodeGen::FUN_TYPE functionType){
-////    map<string, int>::iterator itr = mValue.find(inName);
-////    if (itr == mValue.end())
-////    {
-////        throw "No value could be found.";
-////    }
-////
-////    int value = itr->second;
-//        cout<<"void gen "<<name <<" function  type"<<functionType<<endl;
-//
-//        if (functionType==FUN_TYPE_FUNCTION_GET) {//produce  get function
-//                std::locale loc;
-//                string funName(name);
-//
-//                funName[0] = toupper(funName[0]);
-//
-//
-//                cout<<"//function auto gen bye AaptExt\n";
-//                cout<<"int "<<OPENATLAS_NS_RESOURCE_CLASS<<"::get"<<funName<<"(std::string resType,std::string resName){\n"
-//                    <<"map<string, int>::iterator itr ="<<getFunctionMapName(name)<<".find("//gen  map find
-//                    <<"; }"<<endl;
-//        }
-//
-//
-//}
 
 string CodeGen::getFunctionMapName(string typeName){
         string mapName(typeName);
@@ -123,9 +84,9 @@ string CodeGen::genOPENATLAS_NS_RESOURCE_CLASS_PUBLIC_FUNCTION_IMPL()
         contentFunImpl.append("(std::string resName){\n");
         contentFunImpl.append("map<string, int>::iterator itr =");
                               
-        contentFunImpl.append(getFunctionMapName(funName));
+        contentFunImpl.append(getFunctionMapName(resTypeList[arrayIndex]));
         contentFunImpl.append(".find(resName);\n");
-        contentFunImpl.append("if (itr == ").append(getFunctionMapName(funName)).append(".end()){\n");
+        contentFunImpl.append("if (itr == ").append(getFunctionMapName(resTypeList[arrayIndex])).append(".end()){\n");
         contentFunImpl.append("return 0x0000;\n}\n");
         contentFunImpl.append("return itr->second;");
         contentFunImpl.append(" \n}\n\n\n\n");
@@ -140,20 +101,13 @@ string CodeGen::genOPENATLAS_NS_RESOURCE_CLASS_PUBLIC_FUNCTION_IMPL()
         
         cout<<"//function auto gen bye AaptExt\n";
         
-        contentFunImpl.append("int ").append(OPENATLAS_NS_RESOURCE_CLASS);
+        contentFunImpl.append("void ").append(OPENATLAS_NS_RESOURCE_CLASS);
         contentFunImpl.append("::set").append(funName).append("(std::string resName,int resVal){\n");
         contentFunImpl.append(getFunctionMapName(resTypeList[arrayIndex]));
-        //.insert(std::pair<std::string, Food>("Key", Food("Ice Cream")));
+      
         contentFunImpl.append(".insert(std::pair<std::string, int>");
         contentFunImpl.append("(resName,resVal));\n");
-//        contentFunImpl.append("map<string, int>::iterator itr =");
-//        contentFunImpl.append(getFunctionMapName(resTypeList[arrayIndex]));
-//        contentFunImpl.append(".find(").append("resName").append(");\n");
-//        contentFunImpl.append(" if (itr ==");
-//        contentFunImpl.append(getFunctionMapName(resTypeList[arrayIndex]));
-//        contentFunImpl.append(".end()){\n");
-//        contentFunImpl.append(" return 0x0000;\n}\n");
-//        contentFunImpl.append("return itr->second;");
+ 
           contentFunImpl.append(" \n}\n\n");
      
     
