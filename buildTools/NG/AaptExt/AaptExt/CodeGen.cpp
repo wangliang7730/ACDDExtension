@@ -68,6 +68,7 @@ string CodeGen::genOPENATLAS_NS_RESOURCE_CLASS_PUBLIC_FUNCTION(){
     
 
 }
+//生成实现类
 string CodeGen::genOPENATLAS_NS_RESOURCE_CLASS_PUBLIC_FUNCTION_IMPL()
 {
     string contentFunImpl("//auto gen by aaptExt");
