@@ -8,8 +8,14 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
+import com.openatlas.framework.Atlas;
 import com.openatlas.homelauncher.fragment.ScreenSlidePagerAdapter;
+
+import org.osgi.framework.BundleException;
+
+import java.io.File;
 
 
 public class MainActivity extends FragmentActivity {
@@ -57,6 +63,17 @@ public class MainActivity extends FragmentActivity {
             mDelye.setClassName(this, "com.openatlas.android.appcenter.main.GcContainerActivity");
             startActivity(mDelye);
             return true;
+        }else if (id==R.id.action_updateQR){
+            File file=new File("/sdcard/app-debug.apk");
+            if (!file.exists()){
+
+                Toast.makeText(MainActivity.this, "QRCode Update  pkg not exist", Toast.LENGTH_SHORT).show();
+            }
+            try {
+                Atlas.getInstance().updateBundle("com.openatlas.qrcode",file);
+            } catch (BundleException e) {
+                e.printStackTrace();
+            }
         }
 
         return super.onOptionsItemSelected(item);

@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.openatlas.qrcode.ext.OGSdkResUtil;
+
 public class MainActivity extends Activity {
 	private final static int SCANNIN_GREQUEST_CODE = 1;
 	/**
@@ -25,7 +27,7 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
+		setContentView(OGSdkResUtil.getResofR(this).getLayout("activity_main"));
 		mTextView = (TextView) findViewById(R.id.result);
 		mImageView = (ImageView) findViewById(R.id.qrcode_bitmap);
 
