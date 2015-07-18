@@ -24,7 +24,7 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.listener.PauseOnScrollListener;
 import com.nostra13.universalimageloader.sample.Constants;
 import com.nostra13.universalimageloader.sample.activity.SimpleImageActivity;
-import com.taobao.universalimageloader.sample.R;
+import com.openatlas.universalimageloader.sample.R;
 
 
 /**

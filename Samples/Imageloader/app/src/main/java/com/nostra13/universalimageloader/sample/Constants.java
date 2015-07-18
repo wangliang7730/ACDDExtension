@@ -15,9 +15,8 @@
  *******************************************************************************/
 package com.nostra13.universalimageloader.sample;
 
-import com.taobao.universalimageloader.sample.R;
 
-
+import com.openatlas.universalimageloader.sample.R;
 
 /**
  * @author Sergey Tarasevich (nostra13[at]gmail[dot]com)
