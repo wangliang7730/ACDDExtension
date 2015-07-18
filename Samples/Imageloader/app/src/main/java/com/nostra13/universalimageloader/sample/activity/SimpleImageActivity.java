@@ -24,7 +24,7 @@ import com.nostra13.universalimageloader.sample.fragment.ImageGalleryFragment;
 import com.nostra13.universalimageloader.sample.fragment.ImageGridFragment;
 import com.nostra13.universalimageloader.sample.fragment.ImageListFragment;
 import com.nostra13.universalimageloader.sample.fragment.ImagePagerFragment;
-import com.taobao.universalimageloader.sample.R;
+import com.openatlas.universalimageloader.sample.R;
 
 
 /**
