@@ -13,6 +13,8 @@
 #include "CodeGenFileUtil.h"
 void  testCodeGen();
 void  testFile(std::string content);
+void  genOpenAtlasResourceHeader();
+void  genOpenAtlasResourceImpl();
 int main(int argc, const char * argv[]) {
     // insert code here...
     std::cout << "Hello, World!\n";
@@ -20,7 +22,9 @@ int main(int argc, const char * argv[]) {
    AaptConfig *mAaptConfig= AaptConfig::getInstance();
     mAaptConfig->initConfigFile("/Users/BunnyBlue/Downloads/aapt_config.txt");
     cout<<mAaptConfig->getConfigByKey(AAPT_CONFIG_PKG);
-    testCodeGen();
+    //testCodeGen();
+    genOpenAtlasResourceHeader();
+    genOpenAtlasResourceImpl();
     return 0;
 }
 
@@ -36,6 +40,17 @@ void  testCodeGen(){
     
     
 
+}
+void  genOpenAtlasResourceHeader(){
+     CodeGen mCode;
+    CodeGenFileUtil mCodeGen;
+    mCodeGen.genFile("/Users/BunnyBlue/Downloads/aapt.h", mCode.genOPENATLAS_NS_RESOURCE_CLASS());
+}
+
+void  genOpenAtlasResourceImpl(){
+    CodeGen mCode;
+    CodeGenFileUtil mCodeGen;
+    mCodeGen.genFile("/Users/BunnyBlue/Downloads/aapt.cpp", mCode.genOPENATLAS_NS_RESOURCE_CLASS_PUBLIC_FUNCTION_IMPL());
 }
 void  testFile(std::string content){
     CodeGenFileUtil mCodeGen;
