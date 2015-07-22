@@ -1,6 +1,8 @@
 package com.openatlas.homelauncher;
 
 
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -74,6 +76,12 @@ public class MainActivity extends FragmentActivity {
             } catch (BundleException e) {
                 e.printStackTrace();
             }
+        }else  if (id==R.id.action_about){
+
+            AlertDialog.Builder mBuild=new AlertDialog.Builder(this);
+            mBuild.setTitle("About");
+            mBuild.setMessage("Home Version:1.0\n OpenAtlas Version:1.0.0-dev");
+            mBuild.create().show();
         }
 
         return super.onOptionsItemSelected(item);
