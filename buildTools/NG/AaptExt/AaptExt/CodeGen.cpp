@@ -31,7 +31,15 @@ string CodeGen::genOPENATLAS_NS_RESOURCE_CLASS(){
         //gen header body end
     contentRESOURCE_CLASS.append(genOPENATLAS_NS_RESOURCE_CLASS_PUBLIC_FUNCTION());
     //gen  function start
-    //gen function end
+    //gen function end;
+    contentRESOURCE_CLASS.append("//gen  instance function\n");
+    contentRESOURCE_CLASS.append("protected:\n");
+    contentRESOURCE_CLASS.append("struct Object_Creator\n{\n");
+    contentRESOURCE_CLASS.append(" Object_Creator()\n{\n");
+    contentRESOURCE_CLASS.append("OpenAtlasResource::getInstance();\n");
+    contentRESOURCE_CLASS.append("}\n};\n\n\n");
+    contentRESOURCE_CLASS.append("static Object_Creator _object_creator;\n\n");
+    contentRESOURCE_CLASS.append("OpenAtlasResource();\n\n"); contentRESOURCE_CLASS.append("~PreBuildResources() {};\n\n");
         contentRESOURCE_CLASS.append("};\n");
     
 
@@ -45,6 +53,10 @@ string CodeGen::genOPENATLAS_NS_RESOURCE_CLASS(){
 string CodeGen::genOPENATLAS_NS_RESOURCE_CLASS_PUBLIC_FUNCTION(){
     //void get
     string contentFunctions("public :\n");
+    contentFunctions.append("static OpenAtlasResource* getInstance()\n{\n");
+    contentFunctions.append(" static OpenAtlasResource instance;\n");
+     contentFunctions.append(" return &instance;\n}\n");
+
     
     int arrayIndex=0;
     for(arrayIndex=0;arrayIndex< sizeof(resTypeList)/sizeof(string);arrayIndex++){
