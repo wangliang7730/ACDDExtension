@@ -11,6 +11,7 @@
 
 #include "CodeGen.h"
 #include "CodeGenFileUtil.h"
+#include "CodeGenResouceBirdge.h"
 void  testCodeGen();
 void  testFile(std::string content);
 void  genOpenAtlasResourceHeader();
@@ -25,6 +26,9 @@ int main(int argc, const char * argv[]) {
     //testCodeGen();
     genOpenAtlasResourceHeader();
     genOpenAtlasResourceImpl();
+    
+    CodeGenResouceBirdge mCodeGenResouceBirdge;
+    cout<<mCodeGenResouceBirdge.genFunctionBridge_getResource();
     return 0;
 }
 
@@ -44,13 +48,13 @@ void  testCodeGen(){
 void  genOpenAtlasResourceHeader(){
      CodeGen mCode;
     CodeGenFileUtil mCodeGen;
-    mCodeGen.genFile("/Users/BunnyBlue/Downloads/aapt.h", mCode.genOPENATLAS_NS_RESOURCE_CLASS());
+    mCodeGen.genFile("/Users/BunnyBlue/Downloads/OpenAtlasResource.h", mCode.genOPENATLAS_NS_RESOURCE_CLASS());
 }
 
 void  genOpenAtlasResourceImpl(){
     CodeGen mCode;
     CodeGenFileUtil mCodeGen;
-    mCodeGen.genFile("/Users/BunnyBlue/Downloads/aapt.cpp", mCode.genOPENATLAS_NS_RESOURCE_CLASS_PUBLIC_FUNCTION_IMPL());
+    mCodeGen.genFile("/Users/BunnyBlue/Downloads/OpenAtlasResource.cpp", mCode.genOPENATLAS_NS_RESOURCE_CLASS_PUBLIC_FUNCTION_IMPL());
 }
 void  testFile(std::string content){
     CodeGenFileUtil mCodeGen;

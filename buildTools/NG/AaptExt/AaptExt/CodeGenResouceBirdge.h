@@ -10,5 +10,14 @@
 #define __AaptExt__CodeGenResouceBirdge__
 
 #include <stdio.h>
+#include <string>
+#include "CodeGen.h"
+using namespace std;
+class CodeGenResouceBirdge{
+    string  genResourceBridgeClass();
+    std::string  genResourceBridgeHeader();
+public:
+    string  genFunctionBridge_getResource();
+};
 
 #endif /* defined(__AaptExt__CodeGenResouceBirdge__) */
