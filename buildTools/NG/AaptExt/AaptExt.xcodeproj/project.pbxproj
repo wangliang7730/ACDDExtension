@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		D41A60DD1B51F8BF007D1246 /* CodeGenFileUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D41A60DB1B51F8BF007D1246 /* CodeGenFileUtil.cpp */; };
 		D49E91D81B3BA2CC00D4759D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D49E91D71B3BA2CC00D4759D /* main.cpp */; };
 		D49E91E01B3BA63A00D4759D /* AaptConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D49E91DE1B3BA63A00D4759D /* AaptConfig.cpp */; };
+		D4D4FE161B60851300BD49E2 /* CodeGenResouceBirdge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4D4FE141B60851300BD49E2 /* CodeGenResouceBirdge.cpp */; };
 		D4E1F0BF1B5113A500A3E3BD /* CodeGen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4E1F0BD1B5113A500A3E3BD /* CodeGen.cpp */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,8 @@
 		D49E91D71B3BA2CC00D4759D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		D49E91DE1B3BA63A00D4759D /* AaptConfig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AaptConfig.cpp; sourceTree = "<group>"; };
 		D49E91E11B3BAC6800D4759D /* AaptConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AaptConfig.h; sourceTree = "<group>"; };
+		D4D4FE141B60851300BD49E2 /* CodeGenResouceBirdge.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CodeGenResouceBirdge.cpp; sourceTree = "<group>"; };
+		D4D4FE151B60851300BD49E2 /* CodeGenResouceBirdge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeGenResouceBirdge.h; sourceTree = "<group>"; };
 		D4E1F0BD1B5113A500A3E3BD /* CodeGen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CodeGen.cpp; sourceTree = "<group>"; };
 		D4E1F0BE1B5113A500A3E3BD /* CodeGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeGen.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +76,8 @@
 				D4E1F0BE1B5113A500A3E3BD /* CodeGen.h */,
 				D41A60DB1B51F8BF007D1246 /* CodeGenFileUtil.cpp */,
 				D41A60DC1B51F8BF007D1246 /* CodeGenFileUtil.h */,
+				D4D4FE141B60851300BD49E2 /* CodeGenResouceBirdge.cpp */,
+				D4D4FE151B60851300BD49E2 /* CodeGenResouceBirdge.h */,
 			);
 			path = AaptExt;
 			sourceTree = "<group>";
@@ -112,7 +117,7 @@
 				};
 			};
 			buildConfigurationList = D49E91CF1B3BA2CC00D4759D /* Build configuration list for PBXProject "AaptExt" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -137,6 +142,7 @@
 				D49E91D81B3BA2CC00D4759D /* main.cpp in Sources */,
 				D49E91E01B3BA63A00D4759D /* AaptConfig.cpp in Sources */,
 				D41A60DD1B51F8BF007D1246 /* CodeGenFileUtil.cpp in Sources */,
+				D4D4FE161B60851300BD49E2 /* CodeGenResouceBirdge.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
