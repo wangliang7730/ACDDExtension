@@ -82,6 +82,8 @@ public class MainActivity extends FragmentActivity {
             mBuild.setTitle("About");
             mBuild.setMessage("Home Version:1.0\n OpenAtlas Version:1.0.0-dev");
             mBuild.create().show();
+        }else  if (id==R.id.action_nativeFragment){
+            startActivity(new Intent(this,NativeFragmentActivity.class));
         }
 
         return super.onOptionsItemSelected(item);
