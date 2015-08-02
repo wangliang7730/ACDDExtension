@@ -11,11 +11,11 @@ OpenAtlasExtension,is extension project of OpenAtlas ,a Android Component Plugin
 
 
 ##Sample & Art
-<a href="https://github.com/bunnyblue/OpenAtlasExtension/raw/bunny/Dist/OpenAtlasLauncher.apk">
+<a href="https://github.com/bunnyblue/OpenAtlasExtension/raw/master/Dist/OpenAtlasLauncher.apk">
   Sample Apk,you can download from here
 </a>
 
-![Sample Gif](https://github.com/bunnyblue/OpenAtlasExtension/raw/bunny/art/demo.gif)
+![Sample Gif](https://github.com/bunnyblue/OpenAtlasExtension/raw/master/art/demo.gif)
 
 ## License
 The MIT License (MIT) Copyright (c) 2015 Bunny Blue,achellies
