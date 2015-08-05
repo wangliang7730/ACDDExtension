@@ -14,10 +14,12 @@
 #include "CodeGen.h"
 using namespace std;
 class CodeGenResouceBirdge{
+    public:
     string  genResourceBridgeClass();
     std::string  genResourceBridgeHeader();
-public:
+
     string  genFunctionBridge_getResource();
+    string  genFunctionBridge_AnalyticsSharedResource();
 };
 
 #endif /* defined(__AaptExt__CodeGenResouceBirdge__) */

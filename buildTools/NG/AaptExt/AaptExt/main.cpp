@@ -20,15 +20,15 @@ int main(int argc, const char * argv[]) {
     // insert code here...
     std::cout << "Hello, World!\n";
    
-   AaptConfig *mAaptConfig= AaptConfig::getInstance();
-    mAaptConfig->initConfigFile("/Users/BunnyBlue/Downloads/aapt_config.txt");
-    cout<<mAaptConfig->getConfigByKey(AAPT_CONFIG_PKG);
+//   AaptConfig *mAaptConfig= AaptConfig::getInstance();
+//    mAaptConfig->initConfigFile("/Users/BunnyBlue/Downloads/aapt_config.txt");
+//    cout<<mAaptConfig->getConfigByKey(AAPT_CONFIG_PKG);
     //testCodeGen();
-    genOpenAtlasResourceHeader();
-    genOpenAtlasResourceImpl();
+  //  genOpenAtlasResourceHeader();
+   // genOpenAtlasResourceImpl();
     
     CodeGenResouceBirdge mCodeGenResouceBirdge;
-    cout<<mCodeGenResouceBirdge.genFunctionBridge_getResource();
+    cout<<mCodeGenResouceBirdge.genFunctionBridge_AnalyticsSharedResource();
     return 0;
 }
 
