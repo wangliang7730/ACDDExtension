@@ -15,8 +15,12 @@ public class GameReceiver extends BroadcastReceiver {
 	public void onReceive(Context context, Intent intent) {
 		// TODO: This method is called when the BroadcastReceiver is receiving
 		// an Intent broadcast.
-		System.out.println("GameReceiver.onReceive()"+intent.getStringExtra("msg"));
-	    Intent intent2 = new Intent(context, GcAppDownLoadService.class);
-	    context.startService(intent2);
+		System.out.println("GameReceiver.onReceive()" + intent.getStringExtra("msg"));
+		Intent intent2 = new Intent(context, GcAppDownLoadService.class);
+		context.startService(intent2);
+
+
+
 	}
+
 }

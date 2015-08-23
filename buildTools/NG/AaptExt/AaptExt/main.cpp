@@ -28,7 +28,7 @@ int main(int argc, const char * argv[]) {
    // genOpenAtlasResourceImpl();
     
     CodeGenResouceBirdge mCodeGenResouceBirdge;
-    cout<<mCodeGenResouceBirdge.genFunctionBridge_AnalyticsSharedResource();
+    cout<<mCodeGenResouceBirdge.genFunctionBridge_getResource();
     return 0;
 }
 

@@ -2,4 +2,7 @@
     <string name="app_name">AppCenter</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="app_tickerText">AppCenter Bundle</string>
+    <string name="app_notify_title">app_notify_title</string>
+    <string name="app_notify">app_notify</string>
 </resources>
