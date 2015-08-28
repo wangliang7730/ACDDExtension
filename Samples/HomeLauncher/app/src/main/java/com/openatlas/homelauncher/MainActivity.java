@@ -2,7 +2,6 @@ package com.openatlas.homelauncher;
 
 
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -12,7 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.openatlas.framework.Atlas;
+import com.openatlas.framework.OpenAtlas;
 import com.openatlas.homelauncher.fragment.ScreenSlidePagerAdapter;
 
 import org.osgi.framework.BundleException;
@@ -64,6 +63,7 @@ public class MainActivity extends FragmentActivity {
             Intent mDelye = new Intent();
             mDelye.setClassName(this, "com.openatlas.android.appcenter.main.GcContainerActivity");
             startActivity(mDelye);
+
             return true;
         }else if (id==R.id.action_updateQR){
             File file=new File("/sdcard/app-debug.apk");
@@ -72,7 +72,7 @@ public class MainActivity extends FragmentActivity {
                 Toast.makeText(MainActivity.this, "QRCode Update  pkg not exist", Toast.LENGTH_SHORT).show();
             }
             try {
-                Atlas.getInstance().updateBundle("com.openatlas.qrcode",file);
+                OpenAtlas.getInstance().updateBundle("com.openatlas.qrcode",file);
             } catch (BundleException e) {
                 e.printStackTrace();
             }
