@@ -15,9 +15,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.openatlas.framework.Atlas;
-import com.openatlas.runtime.PackageLite;
+import com.openatlas.framework.OpenAtlas;
 import com.openatlas.homelauncher.R;
+import com.openatlas.runtime.PackageLite;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -83,7 +83,7 @@ public class InstalledAppFragment extends Fragment  implements AdapterView.OnIte
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         mListView= (ListView) view.findViewById(R.id.listView);
-        List<org.osgi.framework.Bundle> mm=Atlas.getInstance().getBundles();
+        List<org.osgi.framework.Bundle> mm=OpenAtlas.getInstance().getBundles();
         ArrayList<String> list=new ArrayList<String>();
         for (org.osgi.framework.Bundle mObj:mm){
 
@@ -114,7 +114,7 @@ public class InstalledAppFragment extends Fragment  implements AdapterView.OnIte
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
        String location= (String) parent.getAdapter().getItem(position);
-       final PackageLite packageLite=   Atlas.getInstance().getBundlePackageLite(location);
+       final PackageLite packageLite=   OpenAtlas.getInstance().getBundlePackageLite(location);
         if (packageLite!=null){
 
 
