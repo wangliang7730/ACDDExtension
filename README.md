@@ -17,6 +17,10 @@ OpenAtlasExtension,is extension project of OpenAtlas ,a Android Component Plugin
 
 ![Sample Gif](https://github.com/bunnyblue/OpenAtlasExtension/raw/master/art/demo.gif)
 
+## WARNING
+Host App  PackageId  must be 0x7f
+
+
 ## License
 The MIT License (MIT) Copyright (c) 2015 Bunny Blue,achellies
 
