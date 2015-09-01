@@ -20,6 +20,6 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-
+    provided fileTree(include: ['*.jar'], dir: 'libs')
+    provided files('libs/otto.jar')
 }

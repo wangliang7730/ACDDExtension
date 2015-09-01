@@ -19,6 +19,12 @@
             android:name=".NativeFragmentActivity"
             android:label="@string/title_activity_native_fragment" >
         </activity>
+
+        <service
+            android:name=".DaemonService"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
     </application>
 
 </manifest>

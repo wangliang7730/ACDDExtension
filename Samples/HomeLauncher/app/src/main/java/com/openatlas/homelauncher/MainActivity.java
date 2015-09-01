@@ -84,7 +84,12 @@ public class MainActivity extends FragmentActivity {
             mBuild.create().show();
         }else  if (id==R.id.action_nativeFragment){
             startActivity(new Intent(this,NativeFragmentActivity.class));
+        }else if (id==R.id.action_daemon){
+            startService(new Intent(this,DaemonService.class));
+            Toast.makeText(MainActivity.this, "DaemonService started", Toast.LENGTH_SHORT).show();
+            return  true;
         }
+
 
         return super.onOptionsItemSelected(item);
     }

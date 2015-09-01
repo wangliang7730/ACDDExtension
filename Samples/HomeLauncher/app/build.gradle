@@ -22,4 +22,5 @@ android {
 dependencies {
     provided files('libs/android-support-v4.jar')
     provided files('libs/openatlas.jar')
+    compile files('libs/square-otto-1.3.2.jar')
 }
