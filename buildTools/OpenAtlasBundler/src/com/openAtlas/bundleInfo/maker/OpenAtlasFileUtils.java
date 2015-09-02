@@ -34,7 +34,7 @@ import java.security.NoSuchAlgorithmException;
  * @author BunnyBlue
  *
  */
-public class FileUtils {
+public class OpenAtlasFileUtils {
     /**
      * 获取指定文件 MD5
      *

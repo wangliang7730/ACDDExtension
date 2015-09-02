@@ -170,7 +170,7 @@ public class PackageLite {
 			AXmlResourceParser parser=new AXmlResourceParser();
 			parser.open(file.getInputStream(entry));
 			PackageLite packageLite=new PackageLite();
-			packageLite.apkMD5=	FileUtils.getMD5(apkPath);
+			packageLite.apkMD5=	OpenAtlasFileUtils.getMD5(apkPath);
 			packageLite.size=apkFile.length();
 			packageLite.checkNativeLibs(file);
 			packageLite.parse(parser);
