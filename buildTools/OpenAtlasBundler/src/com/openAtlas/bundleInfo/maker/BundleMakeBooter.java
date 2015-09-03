@@ -27,21 +27,30 @@ import java.io.IOException;
 import org.json.JSONArray;
 import org.json.JSONException;
 
+import com.openAtlas.bundleInfo.cache.CacheManger;
+
 /**
  * @author BunnyBlue
  *
  */
 public class BundleMakeBooter {
 	public static void main(String[] args) throws JSONException, IOException {
-		if(args.length!=2){
-			throw new  IOException(" args to less , usage plugin_dir out_put_json_path");
+		if(args.length<2){
+			throw new  IOException(" args to less , usage plugin_dir out_put_json_path cachedir");
 			
 			
 		}
 		
 		String path=args[0];
-		ApkPreProcess.preProcess(path);
 		String targetFile=args[1];
+		String cacheDir=args[2];
+		ApkPreProcess.preProcess(path);
+	CacheManger.getInstance().initCacheDir(cacheDir);
+	if (CacheManger.getInstance().vaildCache(path, targetFile)) {
+		System.out.println("no need produce new bundle config returned");
+		return;
+	}
+		
 		File dirFile=new File(path);
 		JSONArray jsonArray=new JSONArray();
 		File[]files=	dirFile.listFiles();
@@ -49,6 +58,7 @@ public class BundleMakeBooter {
 			if (file.getAbsolutePath().contains("libcom")) {
 				PackageLite packageLit=PackageLite.parse(file.getAbsolutePath());
 				jsonArray.put(packageLit.getBundleInfo());
+				CacheManger.getInstance().addNewItem(packageLit.packageName, OpenAtlasFileUtils.getMD5(file.getAbsolutePath()));
 //				try {
 //					 packageLit.getBundleInfo().toString();
 //				} catch (JSONException e) {
@@ -59,6 +69,7 @@ public class BundleMakeBooter {
 
 		}
 		org.apache.commons.io.FileUtils.writeStringToFile(new File(targetFile), jsonArray.toString());
+		CacheManger.getInstance().storeData(targetFile);
 		System.out.println(jsonArray.toString());
 	}
 
