@@ -46,6 +46,9 @@ public class OpenAtlasFileUtils {
         try {
             MessageDigest messageDigest = MessageDigest.getInstance("MD5");
             File mFile = new File(pkgFilePath);
+            if (!mFile.exists()) {
+				return null;
+			}
             FileInputStream in = new FileInputStream(mFile);
             FileChannel ch = in.getChannel();
             MappedByteBuffer byteBuffer = ch.map(FileChannel.MapMode.READ_ONLY, 0, mFile.length());

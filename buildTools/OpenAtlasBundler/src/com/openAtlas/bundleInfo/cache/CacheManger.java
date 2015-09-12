@@ -54,6 +54,9 @@ public class CacheManger {
 
 	public boolean vaildCache(String path, String bundleConfigFile) {
 		String configHash = OpenAtlasFileUtils.getMD5(bundleConfigFile);
+		if (configHash==null) {
+			return false;
+		}
 		File newConfigFile = new File(cacheFolder, configHash);
 		if (newConfigFile.exists() && newConfigFile.isFile()) {
 			try {
