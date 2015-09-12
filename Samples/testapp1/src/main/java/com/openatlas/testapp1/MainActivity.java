@@ -42,6 +42,15 @@ public class MainActivity extends Activity {
 
             Log.d("com.openatlas.testapp1","start MainActivity non-intent");
             startActivity(intent);
+        }else if (id==R.id.action_rec_cls){
+            Intent intent=new Intent();
+            intent.setClassName(this, "com.openatlas.testapp2.TestApp2Receiver");
+            sendBroadcast(intent);
+            Log.d("com.openatlas.testapp1", "start TestApp2Receiver non-intent");
+        }else if(id==R.id.action_rec_action){
+            Intent intent=new Intent("com.openatlas.testapp2.Message");
+            sendBroadcast(intent);
+            Log.d("com.openatlas.testapp1","start v as Intent");
         }
 
 
