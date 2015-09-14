@@ -28,8 +28,9 @@ import android.graphics.drawable.BitmapDrawable;
 import android.util.AttributeSet;
 import android.view.View;
 
+import com.acdd.qrcode.R;
 import com.google.zxing.client.android.camera.CameraManager;
-import com.openatlas.qrcode.R;
+
 
 
 /**

@@ -21,7 +21,7 @@ import java.util.concurrent.CountDownLatch;
 import android.os.Handler;
 import android.os.Looper;
 
-import com.openatlas.qrcode.CaptureActivity;
+import com.acdd.qrcode.CaptureActivity;
 
 /**
  * This thread does all the heavy lifting of decoding the images. 解码线程

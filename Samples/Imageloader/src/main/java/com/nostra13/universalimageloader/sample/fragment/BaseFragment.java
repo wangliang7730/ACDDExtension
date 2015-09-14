@@ -23,8 +23,9 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import com.acdd.universalimageloader.sample.R;
 import com.nostra13.universalimageloader.core.ImageLoader;
-import com.openatlas.universalimageloader.sample.R;
+
 
 
 /**

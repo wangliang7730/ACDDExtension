@@ -28,11 +28,12 @@ import android.widget.BaseAdapter;
 import android.widget.Gallery;
 import android.widget.ImageView;
 
+import com.acdd.universalimageloader.sample.R;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.sample.Constants;
 import com.nostra13.universalimageloader.sample.activity.SimpleImageActivity;
-import com.openatlas.universalimageloader.sample.R;
+
 
 
 /**

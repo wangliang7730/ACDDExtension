@@ -20,11 +20,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AbsListView;
 
+import com.acdd.universalimageloader.sample.R;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.listener.PauseOnScrollListener;
 import com.nostra13.universalimageloader.sample.Constants;
 import com.nostra13.universalimageloader.sample.activity.SimpleImageActivity;
-import com.openatlas.universalimageloader.sample.R;
+
 
 
 /**

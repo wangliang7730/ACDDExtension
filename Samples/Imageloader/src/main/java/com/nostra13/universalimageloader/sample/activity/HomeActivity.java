@@ -22,6 +22,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.acdd.universalimageloader.sample.R;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.sample.Constants;
 import com.nostra13.universalimageloader.sample.fragment.ImageGalleryFragment;
@@ -29,7 +30,6 @@ import com.nostra13.universalimageloader.sample.fragment.ImageGridFragment;
 import com.nostra13.universalimageloader.sample.fragment.ImageListFragment;
 import com.nostra13.universalimageloader.sample.fragment.ImagePagerFragment;
 import com.nostra13.universalimageloader.utils.L;
-import com.openatlas.universalimageloader.sample.R;
 
 import java.io.File;
 import java.io.FileOutputStream;

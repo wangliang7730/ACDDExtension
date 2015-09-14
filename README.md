@@ -1,5 +1,5 @@
-# OpenAtlasExtension
-OpenAtlasExtension,is extension project of OpenAtlas ,a Android Component Plugin Framework<br>The MIT License (MIT) Copyright (c) 2015 Bunny Blue
+# ACDDExtension
+ACDDExtension,is extension project of ACDD ,a Android Component Plugin Framework<br>The MIT License (MIT) Copyright (c) 2015 Bunny Blue
 
 
 
@@ -11,11 +11,11 @@ OpenAtlasExtension,is extension project of OpenAtlas ,a Android Component Plugin
 
 
 ##Sample & Art
-<a href="https://github.com/bunnyblue/OpenAtlasExtension/raw/master/Dist/OpenAtlasLauncher.apk">
+<a href="https://github.com/bunnyblue/ACDDExtension/raw/master/Dist/ACDDLauncher.apk">
   Sample Apk,you can download from here
 </a>
 
-![Sample Gif](https://github.com/bunnyblue/OpenAtlasExtension/raw/master/art/demo.gif)
+![Sample Gif](https://github.com/bunnyblue/ACDDExtension/raw/master/art/demo.gif)
 
 ## WARNING
 Host App  PackageId  must be 0x7f

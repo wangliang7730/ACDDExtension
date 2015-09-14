@@ -5,7 +5,7 @@ android {
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        applicationId "com.openatlas.android.game2"
+        applicationId "com.acdd.android.game2"
         minSdkVersion 14
         targetSdkVersion 22
         versionCode 1

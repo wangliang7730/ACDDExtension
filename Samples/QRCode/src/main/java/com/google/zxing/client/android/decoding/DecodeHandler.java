@@ -22,10 +22,11 @@ import android.os.Looper;
 import android.os.Message;
 import android.util.Log;
 
+import com.acdd.qrcode.BarCode;
+import com.acdd.qrcode.CaptureActivity;
+import com.acdd.qrcode.R;
 import com.google.zxing.client.android.camera.CameraManager;
-import com.openatlas.qrcode.BarCode;
-import com.openatlas.qrcode.CaptureActivity;
-import com.openatlas.qrcode.R;
+
 
 final class DecodeHandler extends Handler {
 
