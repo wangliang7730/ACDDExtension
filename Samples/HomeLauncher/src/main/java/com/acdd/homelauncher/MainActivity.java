@@ -3,6 +3,7 @@ package com.acdd.homelauncher;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.PagerAdapter;
@@ -14,9 +15,11 @@ import android.widget.Toast;
 import com.acdd.homelauncher.fragment.ScreenSlidePagerAdapter;
 
 import org.acdd.framework.ACDD;
+import org.acdd.hack.Reflect;
 import org.osgi.framework.BundleException;
 
 import java.io.File;
+import java.lang.reflect.Field;
 
 
 public class MainActivity extends FragmentActivity {
@@ -80,8 +83,11 @@ public class MainActivity extends FragmentActivity {
 
             AlertDialog.Builder mBuild=new AlertDialog.Builder(this);
             mBuild.setTitle("About");
-            mBuild.setMessage("Home Version:1.0\n ACDD Version:1.0.0-dev");
+            mBuild.setMessage("Home Version:1.0\nACDDCore ver:" + getVersionName() + "\n" +
+                    "ACDDCore build:" + getVersionCode() + "\n" +
+                    "Launcher Version:" + getLauncherVerName());
             mBuild.create().show();
+
         }else  if (id==R.id.action_nativeFragment){
             startActivity(new Intent(this,NativeFragmentActivity.class));
         }else if (id==R.id.action_daemon){
@@ -92,5 +98,53 @@ public class MainActivity extends FragmentActivity {
 
 
         return super.onOptionsItemSelected(item);
+    }
+
+    String getVersionName() {
+        try {
+            Class sdk = Class.forName("org.acdd.sdk.BuildConfig");
+            Field mField = Reflect.getField(sdk, "VERSION_NAME");
+            String verName = (String) mField.get(null);
+            return verName;
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        return "not found";
+    }
+    int getVersionCode() {
+        try {
+            Class sdk = Class.forName("org.acdd.sdk.BuildConfig");
+            Field mField = Reflect.getField(sdk, "VERSION_CODE");
+            int verName = mField.getInt(null);
+            return verName;
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        return 1;
+    }
+    String getCoreVersion() {
+        try {
+            Class sdk = Class.forName("org.acdd.sdk.BuildConfig");
+            Field mField = Reflect.getField(sdk, "ACDDCoreVersion");
+            String verName = (String) mField.get(null);
+            return verName;
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        return "not found";
+    }
+    String getLauncherVerName()  {
+        try {
+            return getPackageManager().getPackageInfo(getPackageName(),0).versionName;
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        return "no found";
     }
 }

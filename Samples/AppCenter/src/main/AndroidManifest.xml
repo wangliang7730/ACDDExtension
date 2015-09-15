@@ -29,7 +29,7 @@
             android:exported="false" >
             <meta-data
                 android:name="bundleLocation"
-                android:value="com.openatlas.android.appcenter" />
+                android:value="com.acdd.android.appcenter" />
         </service>
 
         <receiver
@@ -37,7 +37,7 @@
             android:enabled="true"
             android:exported="false" >
             <intent-filter>
-                <action android:name="com.openatlas.android.appcenter.GameStaticReceiver" >
+                <action android:name="com.acdd.android.appcenter.GameStaticReceiver" >
                 </action>
             </intent-filter>
         </receiver>

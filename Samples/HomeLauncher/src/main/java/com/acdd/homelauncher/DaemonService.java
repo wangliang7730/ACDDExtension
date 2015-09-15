@@ -4,8 +4,9 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
 
-import com.openatlas.homelauncher.otto.OttoManger;
-import com.openatlas.homelauncher.otto.OttoMessage;
+import org.acdd.otto.OttoManger;
+import org.acdd.otto.OttoMessage;
+
 
 public class DaemonService extends Service {
     Thread thread =new Thread(new Runnable() {

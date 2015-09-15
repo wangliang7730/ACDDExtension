@@ -22,6 +22,6 @@ android {
 dependencies {
     provided files('libs/android-support-v4.jar')
     provided files('libs/acdd.jar')
-    provided files('libs/otto.jar')
     provided files('libs/square-otto-1.3.2.jar')
+    provided files('libs/export.jar')
 }
