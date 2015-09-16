@@ -39,9 +39,10 @@ import android.widget.Button;
 
 import com.acdd.android.appcenter.AppProvider;
 import com.acdd.android.appcenter.R;
-import com.openatlas.homelauncher.otto.OttoManger;
-import com.openatlas.homelauncher.otto.OttoMessage;
 import com.squareup.otto.Subscribe;
+
+import org.acdd.otto.OttoManger;
+import org.acdd.otto.OttoMessage;
 
 
 public class ActivityInternalActivity extends Activity {

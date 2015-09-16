@@ -36,7 +36,7 @@
         <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <action android:name="com.openatlas.testapp2.MainActivity.Interface" />
+                <action android:name="com.acdd.testapp2.MainActivity.Interface" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -47,7 +47,7 @@
             android:enabled="true"
             android:exported="false" >
             <intent-filter>
-                <action android:name="com.openatlas.testapp2.Message"/>
+                <action android:name="com.acdd.testapp2.Message"/>
             </intent-filter>
         </receiver>
     </application>

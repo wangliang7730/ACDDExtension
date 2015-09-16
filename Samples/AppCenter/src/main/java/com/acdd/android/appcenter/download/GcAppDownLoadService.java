@@ -72,7 +72,7 @@ public class GcAppDownLoadService extends Service {
 		notification.flags |= Notification.FLAG_AUTO_CANCEL;
 
 		Intent intent = new Intent();
-		intent.setComponent(new ComponentName("com.openatlas.lunacher", "com.acdd.android.appcenter.main.GcContainerActivity"));
+		intent.setComponent(new ComponentName("com.acdd.lunacher", "com.acdd.android.appcenter.main.GcContainerActivity"));
 		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 		PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_ONE_SHOT);
 		// 点击状态栏的图标出现的提示信息设置
