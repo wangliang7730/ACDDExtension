@@ -120,7 +120,7 @@ public class InstalledAppFragment extends Fragment  implements AdapterView.OnIte
         }
 
         mListView.setAdapter(new ArrayAdapter<String>(getActivity(),
-                android.R.layout.simple_list_item_1, android.R.id.text1, list));
+                R.layout.item_app, android.R.id.text1, list));
         mListView.setOnItemClickListener(this);
     }
 

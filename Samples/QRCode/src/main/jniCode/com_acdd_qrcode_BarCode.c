@@ -4,9 +4,9 @@
 
 #include "zbar.h"
 
-#include "com_openatlas_qrcode_BarCode.h"
+#include "com_acdd_qrcode_BarCode.h"
 
-JNIEXPORT jstring JNICALL Java_com_openatlas_qrcode_BarCode(
+JNIEXPORT jstring JNICALL Java_com_acdd_qrcode_BarCode(
 		JNIEnv *env, jclass clazz, jbyteArray img, jint width, jint height) {
 
 	zbar_image_scanner_t *scanner;
@@ -57,7 +57,7 @@ JNIEXPORT jstring JNICALL Java_com_openatlas_qrcode_BarCode(
 	return s;
 }
 
-JNIEXPORT jstring JNICALL Java_com_openatlas_qrcode_BarCode_decodeCrop(
+JNIEXPORT jstring JNICALL Java_com_acdd_qrcode_BarCode_decodeCrop(
 		JNIEnv *env,jclass clazz,   jbyteArray img, jint width, jint height,
 		jint x, jint y, jint cropw, jint croph) {
 

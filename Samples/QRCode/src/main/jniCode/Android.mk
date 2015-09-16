@@ -59,7 +59,7 @@ LOCAL_SRC_FILES :=	convert.c \
 					decoder/ean.c \
 					decoder/databar.c \
 					decoder/i25.c \
-					com_openatlas_qrcode_BarCode.c
+					com_acdd_qrcode_BarCode.c
 	
 LOCAL_CFLAGS := -I$(LOCAL_PATH) -I$(LOCAL_PATH)/$(LIBICONV)
 
