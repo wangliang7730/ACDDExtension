@@ -58,7 +58,7 @@ public class GcAppDownLoadService extends Service {
 	@Override
 	public int onStartCommand(Intent intent, int flags, int startId) {
 		System.out.println("GcAppDownLoadService.onStartCommand()"+this.getBaseContext().getClass().getCanonicalName());
-		addAppNotify(this);
+		//addAppNotify(this);
 		return super.onStartCommand(intent, flags, startId);
 	}
 

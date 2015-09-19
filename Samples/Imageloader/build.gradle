@@ -30,7 +30,15 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 22
     buildToolsVersion "22.0.1"
+    signingConfigs {
+        config {
+            keyAlias 'AndroidDebugKey'
+            keyPassword 'android'
 
+            storeFile rootProject.file('accd_debug.keystore')
+            storePassword 'android'
+        }
+    }
     defaultConfig {
         applicationId "com.acdd.universalimageloader.sample"
         minSdkVersion 14
