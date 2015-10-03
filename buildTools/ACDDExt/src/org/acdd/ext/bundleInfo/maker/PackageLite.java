@@ -1,5 +1,5 @@
 /**
- *  OpenAtlasForAndroid Project
+ *  ACDD Project
 The MIT License (MIT) Copyright (OpenAtlasForAndroid) 2015 Bunny Blue,achellies
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software

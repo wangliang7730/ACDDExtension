@@ -1,5 +1,5 @@
 /**
- * OpenAtlasForAndroid Project
+ * ACDD Project
  * <p/>
  * The MIT License (MIT)
  * Copyright (c) 2015 Bunny Blue

@@ -1,4 +1,0 @@
-pkg=io.github.openaltas
-preBuildJarPath=prebuild_resource
-pkgGroupId=0x10
-versionName=1.0
