@@ -1,0 +1,7 @@
+make USE_MINGW=y adb
+make USE_MINGW=y adb -j4
+make USE_MINGW=y adb 
+make USE_MINGW=y aapt
+
+branch android-6.0.0_r1
+
