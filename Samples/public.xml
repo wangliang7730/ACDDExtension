@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ ACDDExtension Project
-  ~ file activity_internal.xml  is  part of ACDDExtension
+  ~ file public.xml  is  part of ACDDExtension
   ~ The MIT License (MIT)  Copyright (c) 2015 Bunny Blue.
   ~
   ~
@@ -25,27 +26,7 @@
   ~
   -->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.taobao.android.game2.main.MainActivity" >
+<resources>
+    <public type="drawable" name="host_launcher_web" id="0x7f080000" />
 
-    <Button
-        android:id="@+id/btnInsert"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="插入2数据" />
-
-    <Button
-        android:id="@+id/btnQuery"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="删除2处理" />
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/host_launcher_web"/>
-
-</LinearLayout>
+</resources>

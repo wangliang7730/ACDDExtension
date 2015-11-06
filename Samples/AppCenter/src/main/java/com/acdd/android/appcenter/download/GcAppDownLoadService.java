@@ -76,8 +76,8 @@ public class GcAppDownLoadService extends Service {
 		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 		PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_ONE_SHOT);
 		// 点击状态栏的图标出现的提示信息设置
-		notification.setLatestEventInfo(context, context.getResources().getString(R.string.app_notify_title),
-				context.getResources().getString(R.string.app_notify), pendingIntent);
+//	点击状态栏的图标出现的提示信息设置	notification.setLatestEventInfo(context, context.getResources().getString(R.string.app_notify_title),
+//				context.getResources().getString(R.string.app_notify), pendingIntent);
 		manager.notify(1, notification); //这个函数中第一个参数代表identifier.如果要同时弹出多条通知，每个通知的这个参数必须不同。
 	}
 }

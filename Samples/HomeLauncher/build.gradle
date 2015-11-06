@@ -28,8 +28,10 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion "22.0.1"
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+    aaptOptions.additionalParameters '--ACDD-resoure-id','0x6b','--ACDD-shared-resources',rootProject.file("public.xml").getAbsolutePath()
+
     signingConfigs {
         config {
             keyAlias 'AndroidDebugKey'
@@ -42,9 +44,9 @@ android {
     defaultConfig {
         applicationId "com.acdd.homelauncher"
         minSdkVersion 14
-        targetSdkVersion 22
+        targetSdkVersion 23
         versionCode 1
-        versionName "1.00x6b"
+        versionName "1.0"
     }
     buildTypes {
         release {
