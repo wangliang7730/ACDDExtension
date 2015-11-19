@@ -36,7 +36,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:text="扫描二维码" />
+        android:text="扫描二维码V2" />
 
     <TextView
         android:id="@+id/result"

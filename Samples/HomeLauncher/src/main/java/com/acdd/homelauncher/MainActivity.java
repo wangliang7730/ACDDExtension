@@ -102,7 +102,7 @@ public class MainActivity extends FragmentActivity {
                 Toast.makeText(MainActivity.this, "QRCode Update  pkg not exist", Toast.LENGTH_SHORT).show();
             }
             try {
-                ACDD.getInstance().updateBundle("com.acdd.qrcode",file);
+                ACDD.getInstance().updateBundle("cn.acdd.qrcode",file);
             } catch (BundleException e) {
                 e.printStackTrace();
             }
