@@ -54,7 +54,7 @@ public class BundleMakeBooter {
 		JSONArray jsonArray=new JSONArray();
 		File[]files=	dirFile.listFiles();
 		for (File file : files) {
-			if (file.getAbsolutePath().contains("libcom")) {
+			if (file.getAbsolutePath().contains("libcom")||file.getAbsolutePath().contains("libcn_")) {
 				PackageLite packageLit=PackageLite.parse(file.getAbsolutePath());
 				jsonArray.put(packageLit.getBundleInfo());
 				CacheManger.getInstance().addNewItem(packageLit.packageName, ACDDFileUtils.getMD5(file.getAbsolutePath()));
