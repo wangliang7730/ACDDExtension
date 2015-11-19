@@ -1,6 +1,7 @@
 # ACDDExtension
 ACDDExtension,is extension project of ACDD ,a Android Component Plugin Framework<br>The MIT License (MIT) Copyright (c) 2015 Bunny Blue
 
+# 样例以及工具链相关问题或者bug这个项目提，ACDD问题请到ACDD提交
 
 
 
