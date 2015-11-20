@@ -67,5 +67,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="启动另一个activity" />
+    <Button
+        android:id="@+id/btnStartAct2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="启动另一个activity" />
 
 </LinearLayout>

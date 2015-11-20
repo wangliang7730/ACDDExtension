@@ -39,6 +39,7 @@ import android.widget.Button;
 
 import com.acdd.android.appcenter.AppProvider;
 import com.acdd.android.appcenter.R;
+import com.acdd.android.appcenter.download.DataSer;
 import com.squareup.otto.Subscribe;
 
 import org.acdd.otto.OttoManger;
@@ -69,6 +70,10 @@ Button btnQuery;
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_internal);
+	try{DataSer ser= (DataSer) getIntent().getSerializableExtra("Serializable");
+		System.err.println(ser);}catch (Exception e){
+		e.printStackTrace();
+	}
 		btnInsert=(Button) findViewById(R.id.btnInsert);
 		btnQuery=(Button) findViewById(R.id.btnQuery);
 		btnInsert.setOnClickListener(new  OnClickListener() {

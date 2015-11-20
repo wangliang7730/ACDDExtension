@@ -43,6 +43,7 @@ import android.widget.Toast;
 
 import com.acdd.android.appcenter.GameReceiver;
 import com.acdd.android.appcenter.R;
+import com.acdd.android.appcenter.download.DataSer;
 import com.acdd.android.appcenter.download.GcAppDownLoadService;
 
 
@@ -59,7 +60,7 @@ public class GcContainerActivity extends Activity {
 		Button btnSendDY=(Button) findViewById(R.id.btnSendDY);
 		Button btnSendSTATIC=(Button) findViewById(R.id.btnSendSTATIC);
 		Button btnStartAct=(Button) findViewById(R.id.btnStartAct);
-
+Button btnStartAct2= (Button) findViewById(R.id.btnStartAct2);
 	
 		btnButton.setOnClickListener(new OnClickListener() {
 
@@ -137,8 +138,17 @@ public class GcContainerActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				startActivity(new Intent(GcContainerActivity.this,ActivityInternalActivity.class));
+				startActivity(new Intent(GcContainerActivity.this, ActivityInternalActivity.class));
 				
+			}
+		});
+		btnStartAct2.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent mIntent=new Intent(GcContainerActivity.this, ActivityInternalActivity.class);
+				mIntent.putExtra("Serializable",new DataSer());
+				startActivity(mIntent);
+
 			}
 		});
 	}
