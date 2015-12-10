@@ -28,6 +28,8 @@
 package com.acdd.qrcode;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -36,8 +38,6 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.acdd.qrcode.ext.OGSdkResUtil;
 
 public class MainActivity extends Activity {
 	private final static int SCANNIN_GREQUEST_CODE = 1;
@@ -54,7 +54,7 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		setContentView(OGSdkResUtil.getResofR(this).getLayout("activity_main"));
+		//setContentView(OGSdkResUtil.getResofR(this).getLayout("activity_main"));
 		mTextView = (TextView) findViewById(R.id.result);
 		mImageView = (ImageView) findViewById(R.id.qrcode_bitmap);
 
@@ -65,10 +65,18 @@ public class MainActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent();
-				intent.setClass(MainActivity.this, CaptureActivity.class);
-				intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-				startActivityForResult(intent, SCANNIN_GREQUEST_CODE);
+				AlertDialog.Builder builder=new AlertDialog.Builder(MainActivity.this);
+				builder.setTitle("Bug Fixed version2")
+						.setMessage("Scan code??").setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						Intent intent = new Intent();
+						intent.setClass(MainActivity.this, CaptureActivity.class);
+						intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+						startActivityForResult(intent, SCANNIN_GREQUEST_CODE);
+					}
+				}).create().show();
+
 			}
 		});
 	}
