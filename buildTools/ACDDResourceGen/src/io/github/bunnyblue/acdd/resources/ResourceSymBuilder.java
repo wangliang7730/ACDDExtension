@@ -82,7 +82,7 @@ public class ResourceSymBuilder {
 
         CtClass rootClass = pool.makeClass(name);
         for (ResNode node : nodes) {
-            CtField ctField = new CtField(pool.getCtClass("int"), node.getName(), rootClass);
+            CtField ctField = new CtField(pool.getCtClass("int"), node.getName().replaceAll("\\.","_"), rootClass);
             ctField.setModifiers(Modifier.STATIC | Modifier.FINAL | Modifier.PUBLIC);
            if (node.getId()!=null){
             rootClass.addField(ctField, node.getId());
